@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require('tailwindcss/defaultTheme')
 module.exports = {
 mode: 'jit',
 content: [
@@ -10,7 +11,11 @@ content: [
     "./app.vue",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily:{
+        sans: ['IBM Plex Sans Thai', ... defaultTheme.fontFamily.sans]
+      }
+    },
   },
   plugins: [],
 }
